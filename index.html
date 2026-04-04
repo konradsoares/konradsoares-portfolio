@@ -507,16 +507,36 @@
         </div>
         <div class="cards-grid collapsed">
             <div class="card">
-                <h3>Production Outage - Race Condition</h3>
-                <p>Diagnosed a critical race condition in a clustered Java middleware environment causing intermittent deadlocks under high load. Root cause: improper connection pool tuning combined with a timeout bug in custom application code.</p>
+                <h3>Multi-User Legacy xBase Freeze</h3>
+                <p>Diagnosed a system-wide freeze in a multi-user legacy xBase application, traced to improper file-lock handling where a paused client held record locks indefinitely, blocking all other users.</p>
             </div>
             <div class="card">
-                <h3>Performance Mystery</h3>
-                <p>Investigated a node experiencing 100% CPU spikes every 48 hours. Discovered a memory leak in a third-party monitoring agent accumulating unchecked event logs over time.</p>
+                <h3>Database Contention & Thread Starvation</h3>
+                <p>Resolved severe performance degradation in an environment by identifying database contention caused by long-running transactions amplified by excessive worker concurrency, leading to thread starvation.</p>
             </div>
             <div class="card">
-                <h3>Data Corruption Recovery</h3>
-                <p>Recovered and validated 2TB of corrupted backup data after a failed SAN migration. Developed automated integrity checks to prevent future occurrences.</p>
+                <h3>Hidden Capacity Loss in Clusters</h3>
+                <p>Identified hidden capacity loss in a clustered environment where a memory-saturated node reduced effective throughput, causing previously stable workloads to trigger system-wide instability.</p>
+            </div>
+            <div class="card">
+                <h3>Self-Inflicted Outage</h3>
+                <p>Diagnosed a self-inflicted outage where excessive diagnostic queries against monitoring threads exhausted application resources, highlighting the impact of uncontrolled troubleshooting actions on system stability.</p>
+            </div>
+            <div class="card">
+                <h3>Prometheus False Positives</h3>
+                <p>Resolved false service outages in a Prometheus-monitored environment by identifying container networking misconfiguration and incorrect endpoint resolution between host and container contexts.</p>
+            </div>
+            <div class="card">
+                <h3>Helm Release State Locks</h3>
+                <p>Unblocked failed Helm deployments by diagnosing release state locks caused by incomplete operations, implementing safe rollback and state cleanup procedures in CI/CD pipelines.</p>
+            </div>
+            <div class="card">
+                <h3>Missing Patched Images</h3>
+                <p>Bridged gaps between documentation and deployment reality by identifying missing patched images in Artifactory, building and promoting compliant images to unblock production upgrades.</p>
+            </div>
+            <div class="card">
+                <h3>Disk Exhaustion from Temp Files</h3>
+                <p>Identified disk exhaustion issues by tracing uncontrolled growth of temporary files to automation scripts lacking cleanup logic, implementing retention and path management improvements.</p>
             </div>
         </div>
     </section>
