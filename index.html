@@ -191,21 +191,18 @@
         }
 
         .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            justify-content: center;
-            max-width: 900px;
-            margin: 0 auto;
+            display: flex !important;
+            flex-wrap: wrap !important;
+            flex-direction: row !important;
         }
 
         .skill-tag {
-            background: rgba(212, 175, 55, 0.15);
-            color: var(--gold);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            display: inline-block;
+            padding: 10px 16px;
+            border-radius: 999px;
+            white-space: nowrap;
+            width: auto;          /* 🔥 critical */
+            max-width: fit-content;
         }
 
         /* Certifications */
@@ -389,7 +386,7 @@
         }
     </style>
 </head>
-<body>
+ <body>
     <nav>
         <div class="logo">KS</div>
         <ul class="nav-links">
@@ -406,7 +403,7 @@
 
     <section class="hero">
         <div class="hero-content">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face" alt="Konrad Soares" style="width:150px;height:150px;border-radius:50%;margin-bottom:1.5rem;border:3px solid var(--gold);object-fit:cover;">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQGun0d8tslmRA/profile-displayphoto-scale_200_200/B4DZ1TV45CIwAY-/0/1775219745380?e=1776902400&v=beta&t=UqlrR-qVQp4nzn8llBJnRe5yQ4hU3_50pElncjxuUHo" alt="Konrad Soares" style="width:150px;height:150px;border-radius:50%;margin-bottom:1.5rem;border:3px solid var(--gold);object-fit:cover;">
             <p class="subtitle">Principal Cloud Engineer</p>
             <h1>Konrad Soares</h1>
             <p class="tagline">From Zero to Hero: A Journey Through Technology, Innovation & Leadership</p>
@@ -415,22 +412,37 @@
     </section>
 
     <section class="about" id="about">
-        <h2 class="section-title"><span>01</span>About Me</h2>
+        <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <p style="font-style:italic;color:var(--gold);margin-bottom:1.5rem;">"It started with curiosity at age 12..."</p>
-            <p>Before the internet existed in Brazil, I discovered my passion for technology. There were no online tutorials, no Google - just a burning curiosity and a willingness to learn.</p>
-            <p>I started with basic courses on computers that weren't even XT286s yet. Then came my first own machine - an MSX - loading programs from 5¼" floppies and cassettes. Those days taught me patience and the thrill of making things work.</p>
-            <p>Technical school in data processing changed everything. I got my hands on an XT286, then a 386 with Soundblaster multimedia and a US Robotics modem. Hardware troubleshooting, building systems, learning Clipper, COBOL, dBase - this is where the foundation was laid.</p>
+            <p>I discovered my passion for technology before the internet was widely available in Brazil. With no tutorials or search engines, I learned through curiosity, tech magazines, and by teaching myself English to access the best resources.</p>
+
+            <img src="photo_2026-04-03_14-47-01.jpg" alt="msx" style="width:150px;height:150px;border-radius:50%;margin-bottom:1.5rem;border:3px solid var(--gold);object-fit:cover;">
+            <img src="photo_2026-04-03_15-44-22.jpg" alt="msx" style="width:150px;height:150px;border-radius:50%;margin-bottom:1.5rem;border:3px solid var(--gold);object-fit:cover;">
+
+            <p>I started with early machines like the MSX, loading programs from floppies and cassettes—experiences that taught patience and problem-solving from the ground up.</p>
+            <p>Technical school in data processing marked a turning point. Working with XT and 386 systems, I built a strong foundation in hardware, networking, and programming languages like Clipper, COBOL, and dBase III Plus.</p>
+
+            <img src="DSC_5286.jpg" alt="sb1" style="width:150px;height:150px;border-radius:50%;margin-bottom:1.5rem;border:3px solid var(--gold);object-fit:cover;">
+            <img src="dBase III r1.0 - Assist.png" alt="sb1" style="width:150px;height:150px;border-radius:50%;margin-bottom:1.5rem;border:3px solid var(--gold);object-fit:cover;">
+
             <p>While studying networking, I uncovered weaknesses in both infrastructure and application design at the first company I worked for, ranging from fragile ring network topologies to multi-user system freezes caused by poor file-lock management in legacy systems/database. At only 19, this led to my promotion from a data entry role to IT Advisor and gave me early exposure to real-world reliability and concurrency challenges, paving the way for my transition into a Delphi development role working with relational databases such as InterBase.</p>
-            <p>Those late-night hours had another benefit too - I figured out how to hack local ISPs to get free internet access after midnight when phone calls were cheaper. Downloading MP3s on Napster became my reward for studying hard.</p>
-            <p>From there, I moved into Delphi and ColdFusion development, then Windows infrastructure. An MCSA certification made me the go-to person for Microsoft troubleshooting. The journey continued into Linux system administration and Java middleware—WebSphere, WebLogic, JBoss, Tomcat—handling JVMs, SOA architectures, and queue messaging systems. This foundation paved the way for my next chapter.</p>
+
+            <img src="Soundblaster-live1.jpg" alt="sb1" style="width:150px;height:150px;border-radius:50%;margin-bottom:1.5rem;border:3px solid var(--gold);object-fit:cover;">
+            <img src="maxresdefault.jpg" alt="sb2" style="width:150px;height:150px;border-radius:50%;margin-bottom:1.5rem;border:3px solid var(--gold);object-fit:cover;">
+            <img src="00084003_86473__18726.jpg" alt="usr1" style="width:150px;height:150px;border-radius:50%;margin-bottom:1.5rem;border:3px solid var(--gold);object-fit:cover;">
+
+            <p>I later moved into development with Delphi and ColdFusion, then into Windows infrastructure, earning MCSA certification and becoming a go-to resource for Microsoft troubleshooting. This evolved into Linux system administration and Java middleware, working with platforms like WebSphere, WebLogic, JBoss, and Tomcat.</p>
+
+            <img src="https://media.licdn.com/dms/image/v2/C4E22AQF7kZ-kcJNMVQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1668208759328?e=1776902400&v=beta&t=csWFH7msNMRBIgzoLoiwJ4Asfhk9mSyZMKNY49_ATSo" alt="2000's" style="width:150px;height:150px;border-radius:50%;margin-bottom:1.5rem;border:3px solid var(--gold);object-fit:cover;">
+
             <p style="margin-top:1.5rem;color:var(--text);font-weight:500;">Today, as Principal Cloud Specialist at OpenText, I blend technical SaaS support, DevOps, and cloud engineering - driven by a love for complex troubleshooting, helping customers succeed, and turning chaos into reliable systems.</p>
-            <p style="margin-top:1rem;color:var(--gold);font-weight:500;">20+ years later, the curiosity still burns.</p>
+            <p style="margin-top:1rem;color:var(--gold);font-weight:500;">More than 20 years later, the curiosity that started it all is still driving me forward.</p>
         </div>
     </section>
 
     <section id="journey">
-        <h2 class="section-title"><span>02</span>My Journey</h2>
+        <h2 class="section-title">My Journey</h2>
         <div class="section-toggle" onclick="var g=this.nextElementSibling;var t=this.querySelector('.toggle-text');if(g.classList.contains('expanded')){g.classList.remove('expanded');g.classList.add('collapsed');this.classList.remove('open');t.textContent='Show Timeline'}else{g.classList.remove('collapsed');g.classList.add('expanded');this.classList.add('open');t.textContent='Hide Timeline'}">
             <span class="arrow">▶</span> <span class="toggle-text">Show Timeline</span>
         </div>
@@ -488,7 +500,7 @@
     </section>
 
     <section class="skills-section" id="skills">
-        <h2 class="section-title"><span>03</span>Skills & Technologies</h2>
+        <h2 class="section-title">Skills & Technologies</h2>
         <div class="section-toggle" onclick="var g=this.nextElementSibling;var t=this.querySelector('.toggle-text');if(g.classList.contains('expanded')){g.classList.remove('expanded');g.classList.add('collapsed');this.classList.remove('open');t.textContent='Show Skills'}else{g.classList.remove('collapsed');g.classList.add('expanded');this.classList.add('open');t.textContent='Hide Skills'}">
             <span class="arrow">▶</span> <span class="toggle-text">Show Skills</span>
         </div>
@@ -532,7 +544,7 @@
     </section>
 
     <section id="education">
-        <h2 class="section-title"><span>04</span>Education</h2>
+        <h2 class="section-title">Education</h2>
         <div class="section-toggle" onclick="var g=this.nextElementSibling;var t=this.querySelector('.toggle-text');if(g.classList.contains('expanded')){g.classList.remove('expanded');g.classList.add('collapsed');this.classList.remove('open');t.textContent='Show Education'}else{g.classList.remove('collapsed');g.classList.add('expanded');this.classList.add('open');t.textContent='Hide Education'}">
             <span class="arrow">▶</span> <span class="toggle-text">Show Education</span>
         </div>
@@ -561,7 +573,7 @@
     </section>
 
     <section id="certs">
-        <h2 class="section-title"><span>05</span>Certifications</h2>
+        <h2 class="section-title">Certifications</h2>
         <div class="section-toggle" onclick="var g=this.nextElementSibling;var t=this.querySelector('.toggle-text');if(g.classList.contains('expanded')){g.classList.remove('expanded');g.classList.add('collapsed');this.classList.remove('open');t.textContent='Show Certifications'}else{g.classList.remove('collapsed');g.classList.add('expanded');this.classList.add('open');t.textContent='Hide Certifications'}">
             <span class="arrow">▶</span> <span class="toggle-text">Show Certifications</span>
         </div>
@@ -640,7 +652,7 @@
     </section>
 
     <section id="hobbies">
-        <h2 class="section-title"><span>06</span>Hobbies & Interests</h2>
+        <h2 class="section-title">Hobbies & Interests</h2>
         <div class="section-toggle" onclick="var g=this.nextElementSibling;var t=this.querySelector('.toggle-text');if(g.classList.contains('expanded')){g.classList.remove('expanded');g.classList.add('collapsed');this.classList.remove('open');t.textContent='Show Hobbies'}else{g.classList.remove('collapsed');g.classList.add('expanded');this.classList.add('open');t.textContent='Hide Hobbies'}">
             <span class="arrow">▶</span> <span class="toggle-text">Show Hobbies</span>
         </div>
@@ -657,8 +669,8 @@
             </div>
             <div class="cert-card">
                 <div class="cert-icon">🤖</div>
-                <h3>Robotics & Electronics</h3>
-                <p>Arduino projects, building and programming custom devices</p>
+                <h3>Robotics & Electronics, Automation & AI</h3>
+                <p>Design and development of Arduino-based systems, integrating automation workflows and AI-driven functionality into custom devices.</p>
             </div>
             <div class="cert-card">
                 <div class="cert-icon">🖨️</div>
@@ -669,7 +681,7 @@
     </section>
 
     <section class="book" id="book">
-        <h2 class="section-title"><span>07</span>My Book</h2>
+        <h2 class="section-title">My Book (In progress)</h2>
         <div class="book-content">
             <div class="book-cover">
                 <h2>From Zero<br>to Hero</h2>
@@ -681,7 +693,7 @@
     </section>
 
     <section class="contact" id="contact">
-        <h2 class="section-title"><span>08</span>Let's Connect</h2>
+        <h2 class="section-title">Let's Connect</h2>
         <div class="contact-links">
             <a href="mailto:konrad.soares@gmail.com">Email</a>
             <a href="https://www.linkedin.com/in/konrad-soares">LinkedIn</a>
