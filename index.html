@@ -501,8 +501,11 @@
     </section>
 
     <section id="troubleshooting">
-        <h2 class="section-title"><span>04</span>Tough Troubleshooting</h2>
-        <div class="cards-grid">
+        <h2 class="section-title">Tough Troubleshooting</h2>
+        <div class="section-toggle" onclick="var g=this.nextElementSibling;var t=this.querySelector('.toggle-text');if(g.classList.contains('expanded')){g.classList.remove('expanded');g.classList.add('collapsed');this.classList.remove('open');t.textContent='Show Troubleshooting'}else{g.classList.remove('collapsed');g.classList.add('expanded');this.classList.add('open');t.textContent='Hide Troubleshooting'}">
+            <span class="arrow">▶</span> <span class="toggle-text">Show Troubleshooting</span>
+        </div>
+        <div class="cards-grid collapsed">
             <div class="card">
                 <h3>Production Outage - Race Condition</h3>
                 <p>Diagnosed a critical race condition in a clustered Java middleware environment causing intermittent deadlocks under high load. Root cause: improper connection pool tuning combined with a timeout bug in custom application code.</p>
